@@ -888,9 +888,9 @@ push "redirect-gateway ipv6"' >>/etc/openvpn/server.conf
 	esac
 
 	echo "crl-verify crl.pem
-ca ca.crt
-cert $SERVER_NAME.crt
-key $SERVER_NAME.key
+ca /etc/openvpn/ca.crt
+cert /etc/openvpn/$SERVER_NAME.crt
+key /etc/openvpn/$SERVER_NAME.key
 auth $HMAC_ALG
 cipher $CIPHER
 ncp-ciphers $CIPHER
